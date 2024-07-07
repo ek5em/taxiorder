@@ -1,0 +1,45 @@
+@import "../../styles/root.scss";
+.crew_list {
+    height: 100%;
+    border: 1px solid $black;
+    list-style: none;
+    border-radius: 2px;
+
+    li {
+        display: flex;
+        gap: 1.5rem;
+        border-bottom: 1px solid $black;
+        padding: 0 0.5rem;
+        cursor: pointer;
+    }
+
+    .crew_car_model {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .crew_info {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .crew_distance {
+        display: flex;
+        align-items: flex-end;
+
+        .arrow {
+            align-self: center;
+            font-size: 1.5rem;
+        }
+    }
+
+    &.empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+}

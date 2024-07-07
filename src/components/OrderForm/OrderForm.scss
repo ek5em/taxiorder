@@ -1,0 +1,124 @@
+@import "../../styles/root.scss";
+
+$mapSize: 60%;
+
+.order_title {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $black;
+    margin-bottom: 1rem;
+}
+
+.order_input_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    font-size: 1.1rem;
+
+    &.order_error {
+        input {
+            border-color: $danger;
+            outline-color: $danger;
+        }
+    }
+}
+
+.input_wrap {
+    position: relative;
+    width: 50%;
+
+    input {
+        width: 80%;
+        border: 1px solid $black;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        padding: 0.2rem;
+        font-family: $font-family;
+    }
+
+    .error_message {
+        color: $danger;
+        position: absolute;
+        left: 0;
+        bottom: -1.5rem;
+    }
+}
+
+.map_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .map {
+        width: $mapSize;
+        min-width: 300px;
+        border: 1px solid $black;
+        border-radius: 2px;
+    }
+
+    .order_crews {
+        width: calc(100% - $mapSize - 2rem);
+        min-width: 300px;
+    }
+}
+
+.submit_order {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    button {
+        background: none;
+        border: 1px solid $grey;
+        padding: 0.5rem;
+        min-width: 300px;
+        cursor: pointer;
+        font-family: $font-family;
+        font-size: 1.3rem;
+        border-radius: 5px;
+        &:hover {
+            background-color: rgba($grey, 50%);
+        }
+    }
+}
+
+.current_crew {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-bottom: 2rem;
+
+    .crew_info {
+        display: flex;
+        gap: 1rem;
+        border-radius: 2px;
+        border: 1px solid $black;
+        padding: 0.5rem 2rem 0.5rem 0.5rem;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .crew_car_model {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .crew_car_color {
+            line-height: 0.5;
+        }
+
+        .crew_car_number {
+            margin-top: 4px;
+            display: flex;
+            align-self: flex-start;
+            padding: 0.1rem 0.5rem;
+            border-radius: 5px;
+            border: 1px solid $grey;
+        }
+    }
+}

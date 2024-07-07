@@ -84,7 +84,7 @@ const OrderForm: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="order_form">
             <h1 className="order_title">Детали заказа</h1>
             <div
                 className={cn("order_input_wrap", {

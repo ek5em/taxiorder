@@ -122,3 +122,16 @@ $mapSize: 60%;
         }
     }
 }
+
+@media (max-width: $table) {
+    .map_wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .map {
+            width: 100%;
+        }
+    }
+}
